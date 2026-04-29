@@ -2,12 +2,15 @@
 train.py — Train sentiment classifiers using scikit-learn.
 """
 
-import pandas as pd
-import numpy as np
-import joblib
+import sys
 import os
-from datetime import datetime
 from pathlib import Path
+
+sys.path.append(str(Path(__file__).parent.parent))
+
+import pandas as pd
+import joblib
+from datetime import datetime
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.naive_bayes import MultinomialNB
@@ -15,9 +18,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.svm import LinearSVC
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import classification_report, accuracy_score
-import sys
-sys.path.append(str(Path(__file__).parent.parent))
+from sklearn.metrics import accuracy_score
 from src.utils import load_config
 
 
@@ -34,7 +35,7 @@ def get_models():
 def train_and_compare(df, text_col="text_processed", label_col="sentiment",
                       test_size=0.2, cv_folds=5, save_best=True):
     """Train all classifiers and return comparison DataFrame."""
-    config = load_config()
+    load_config()
     X = df[text_col].fillna("")
     y = df[label_col]
 

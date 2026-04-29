@@ -3,9 +3,6 @@ text_preprocessing.py — Tokenization, stopwords, stemming, lemmatization, clea
 """
 
 import re
-import string
-import pandas as pd
-import numpy as np
 import nltk
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize

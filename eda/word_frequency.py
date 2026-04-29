@@ -3,7 +3,6 @@ word_frequency.py — Word counts, n-grams, and term frequency analysis.
 """
 
 import pandas as pd
-import numpy as np
 from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 

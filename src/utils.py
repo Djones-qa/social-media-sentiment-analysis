@@ -5,9 +5,7 @@ utils.py — Shared utilities: config, formatting, diagnostics.
 import os
 import yaml
 import pandas as pd
-import numpy as np
 from pathlib import Path
-from datetime import datetime
 
 
 def get_project_root():

@@ -2,8 +2,6 @@
 sentiment_analyzer.py — VADER + TextBlob sentiment classification.
 """
 
-import pandas as pd
-import numpy as np
 from textblob import TextBlob
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 

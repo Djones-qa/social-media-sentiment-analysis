@@ -3,10 +3,6 @@ exploratory_analysis.py — Automated EDA for social media sentiment data.
 """
 
 import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from pathlib import Path
 
 
 def sentiment_distribution(df, sentiment_col="ensemble_sentiment"):

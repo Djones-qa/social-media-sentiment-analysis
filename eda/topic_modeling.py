@@ -3,7 +3,6 @@ topic_modeling.py — LDA topic extraction from social media text.
 """
 
 import pandas as pd
-import numpy as np
 from sklearn.decomposition import LatentDirichletAllocation
 from sklearn.feature_extraction.text import CountVectorizer
 
