@@ -1,0 +1,65 @@
+﻿project:
+  name: "Social Media Sentiment Analysis"
+  version: "1.0.0"
+  author: "Darrius Jones"
+  description: "NLP-powered sentiment classification and social media trend analytics"
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  external_dir: "data/external"
+  text_column: "text"
+  label_column: "sentiment"
+  date_column: "timestamp"
+  id_column: "post_id"
+
+platforms:
+  - Twitter
+  - Instagram
+  - LinkedIn
+
+sentiment:
+  labels:
+    - Positive
+    - Negative
+    - Neutral
+  vader_thresholds:
+    positive: 0.05
+    negative: -0.05
+  textblob_thresholds:
+    positive: 0.1
+    negative: -0.1
+
+preprocessing:
+  min_word_length: 2
+  max_features: 5000
+  ngram_range: [1, 2]
+  remove_urls: true
+  remove_mentions: true
+  remove_hashtag_symbol: true
+  lowercase: true
+  remove_stopwords: true
+  stemming: false
+  lemmatize: true
+
+model:
+  test_size: 0.2
+  random_state: 42
+  cv_folds: 5
+  algorithms:
+    - naive_bayes
+    - logistic_regression
+    - random_forest
+    - svm
+    - gradient_boosting
+
+topic_modeling:
+  num_topics: 5
+  passes: 15
+  words_per_topic: 10
+
+visualization:
+  style: "seaborn-v0_8-whitegrid"
+  palette: "Set2"
+  figure_dpi: 150
+  output_dir: "visualizations/output"
