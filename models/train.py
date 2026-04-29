@@ -8,18 +8,18 @@ from pathlib import Path
 
 sys.path.append(str(Path(__file__).parent.parent))
 
-import pandas as pd
-import joblib
-from datetime import datetime
-from sklearn.model_selection import train_test_split, cross_val_score
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
-from sklearn.svm import LinearSVC
-from sklearn.pipeline import Pipeline
-from sklearn.metrics import accuracy_score
-from src.utils import load_config
+import pandas as pd  # noqa: E402
+import joblib  # noqa: E402
+from datetime import datetime  # noqa: E402
+from sklearn.model_selection import train_test_split, cross_val_score  # noqa: E402
+from sklearn.feature_extraction.text import TfidfVectorizer  # noqa: E402
+from sklearn.naive_bayes import MultinomialNB  # noqa: E402
+from sklearn.linear_model import LogisticRegression  # noqa: E402
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier  # noqa: E402
+from sklearn.svm import LinearSVC  # noqa: E402
+from sklearn.pipeline import Pipeline  # noqa: E402
+from sklearn.metrics import accuracy_score  # noqa: E402
+from src.utils import load_config  # noqa: E402
 
 
 def get_models():
